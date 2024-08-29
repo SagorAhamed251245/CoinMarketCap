@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-color: rgb(255, 3, 3); /* Define the primary color */
+}
+
 // common
 @import "./common/mixin/index.scss";
 
