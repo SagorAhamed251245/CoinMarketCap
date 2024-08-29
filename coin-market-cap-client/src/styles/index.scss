@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// common
+@import "./common/mixin/index.scss";
+
+// page
+@import "./pages/home/home_page";
+
+// component
