@@ -16,7 +16,9 @@ const config: Config = {
       },
       colors: {
         ...colors,
-        primary: "var(--primary-color)", // Correct usage with string interpolation
+        primary: "var(--primary-color)",
+        "gray-primary": "var(--gary-primary-color)", // Correct usage with string interpolation
+        "gray-next": "var(--gary-next)", // Correct usage with string interpolation
       },
     },
   },
