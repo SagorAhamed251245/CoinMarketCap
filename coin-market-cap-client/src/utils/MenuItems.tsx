@@ -3,7 +3,9 @@ import StartSVg from "@/Components/shared/svg/StartSVg";
 import { PortfolioSvg } from "@/Components/shared/svg/Svgs";
 import { Popover } from "antd";
 import Link from "next/link";
+import MenuHover from "@/Components/shared/Navbar/MenuHover";
 import React, { ReactNode } from "react"; // Ensure ReactNode is imported if needed for typing
+import { cryptocurrenciesMouseHoverData } from "@/data/MouseHoverData";
 
 const styles = {
   itemCenter: {
@@ -14,8 +16,9 @@ const styles = {
   },
 };
 
-const popoverContent = <div>content</div>;
-
+const menuHoverItems = (menuHoverData: any) => {
+  return <MenuHover menuHoverData={menuHoverData}></MenuHover>;
+};
 export const leftItems = [
   {
     key: "logo",
@@ -28,33 +31,47 @@ export const leftItems = [
   {
     key: "Cryptocurrencies",
     label: (
-      <Popover content={popoverContent}>
+      <Popover content={menuHoverItems(cryptocurrenciesMouseHoverData)}>
         <Link href="/cryptocurrencies">Cryptocurrencies</Link>
       </Popover>
     ),
   },
   {
     key: "Exchanges",
-    label: <Link href="/exchanges">Exchanges</Link>,
+    label: (
+      <Popover content={menuHoverItems(cryptocurrenciesMouseHoverData)}>
+        <Link href="/exchanges">Exchanges</Link>
+      </Popover>
+    ),
   },
   {
     key: "Community",
     label: (
-      <Link
-        href="/community"
-        className="hover:text-red-500 dark:hover:text-red-500"
-      >
-        Community
-      </Link>
+      <Popover content={menuHoverItems(cryptocurrenciesMouseHoverData)}>
+        <Link
+          href="/community"
+          className="hover:text-red-500 dark:hover:text-red-500"
+        >
+          Community
+        </Link>
+      </Popover>
     ),
   },
   {
     key: "Products",
-    label: <Link href="/products">Products</Link>,
+    label: (
+      <Popover content={menuHoverItems(cryptocurrenciesMouseHoverData)}>
+        <Link href="/products">Products</Link>
+      </Popover>
+    ),
   },
   {
     key: "Learn",
-    label: <Link href="/learn">Learn</Link>,
+    label: (
+      <Popover content={menuHoverItems(cryptocurrenciesMouseHoverData)}>
+        <Link href="/learn">Learn</Link>
+      </Popover>
+    ),
   },
 ];
 
@@ -62,19 +79,23 @@ export const rightItems = [
   {
     key: "Watchlist",
     label: (
-      <Link href="/watchlist" style={styles.itemCenter}>
-        <StartSVg />
-        <p className="ml-2">Watchlist</p>
-      </Link>
+      <Popover content={menuHoverItems(cryptocurrenciesMouseHoverData)}>
+        <Link href="/watchlist" style={styles.itemCenter}>
+          <StartSVg />
+          <p className="ml-2">Watchlist</p>
+        </Link>
+      </Popover>
     ),
   },
   {
     key: "Portfolio",
     label: (
-      <Link href="/portfolio" style={styles.itemCenter}>
-        <PortfolioSvg />
-        <p>Portfolio</p>
-      </Link>
+      <Popover content={menuHoverItems(cryptocurrenciesMouseHoverData)}>
+        <Link href="/portfolio" style={styles.itemCenter}>
+          <PortfolioSvg />
+          <p>Portfolio</p>
+        </Link>
+      </Popover>
     ),
   },
 ];

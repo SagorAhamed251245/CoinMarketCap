@@ -2,10 +2,10 @@
 import React from "react";
 import { Breadcrumb, Input, Layout, Menu, Space, theme } from "antd";
 import Link from "next/link";
-import LogoSvg from "./svg/LogoSvg";
+import LogoSvg from "../svg/LogoSvg";
 import { leftItems, rightItems } from "@/utils/MenuItems";
 import { SearchOutlined } from "@ant-design/icons";
-import { SearchSvg } from "./svg/Svgs";
+import { SearchSvg } from "../svg/Svgs";
 
 const { Header, Content, Footer } = Layout;
 
