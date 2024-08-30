@@ -1,13 +1,10 @@
 "use client";
 import React from "react";
-import { Breadcrumb, Input, Layout, Menu, Space, theme } from "antd";
-import Link from "next/link";
-import LogoSvg from "../svg/LogoSvg";
+import { Layout, Menu } from "antd";
 import { leftItems, rightItems } from "@/utils/MenuItems";
-import { SearchOutlined } from "@ant-design/icons";
 import { SearchSvg } from "../svg/Svgs";
 
-const { Header, Content, Footer } = Layout;
+const { Header } = Layout;
 
 const Navbar: React.FC = () => {
   return (
@@ -16,9 +13,7 @@ const Navbar: React.FC = () => {
       style={{ padding: "0  0", border: "none" }}
     >
       <Menu
-        className="bg-white"
         mode="horizontal"
-        defaultSelectedKeys={["2"]}
         items={leftItems}
         style={{
           flex: 1,
@@ -32,9 +27,7 @@ const Navbar: React.FC = () => {
         }}
       />
       <Menu
-        className="bg-white"
         mode="horizontal"
-        defaultSelectedKeys={["2"]}
         items={rightItems}
         style={{
           minWidth: 0,

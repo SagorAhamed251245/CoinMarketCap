@@ -11,6 +11,10 @@ function AntdProviders({ children }: { children: React.ReactNode }) {
           Menu: {
             itemHoverBg: "#ffffff",
             itemHoverColor: "var(--primary-color)",
+            itemSelectedBg: "#ffffff",
+            itemSelectedColor: "var(--primary-color)",
+            lineWidth: 0,
+            activeBarHeight: 0,
           },
         },
       }}

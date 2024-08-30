@@ -4,7 +4,7 @@ import { PortfolioSvg } from "@/Components/shared/svg/Svgs";
 import { Popover } from "antd";
 import Link from "next/link";
 import MenuHover from "@/Components/shared/Navbar/MenuHover";
-import React, { ReactNode } from "react"; // Ensure ReactNode is imported if needed for typing
+import React from "react"; // Ensure ReactNode is imported if needed for typing
 import { cryptocurrenciesMouseHoverData } from "@/data/MouseHoverData";
 
 const styles = {
